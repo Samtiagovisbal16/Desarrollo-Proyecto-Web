@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Cuentas Bancarias</title>
+    <link rel="stylesheet" href="../css/Style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="contenedorGrid">
+            <div>
+                <img src="../recursos/Aurola-logo.png" width="100px" height="100px" >
+            </div>
+            <h1 class="titulo-3d">BRILLANTE AURORA</h1>
+        </div>
+    </header>
+    <main>
+        <h2>Gestión de Cuentas Bancarias</h2>
+        <form id="cuentaForm">
+            <label for="numeroCuenta">Número de Cuenta:</label>
+            <input type="text" id="numeroCuenta" required>
+
+            <label for="nombreBanco">Nombre del Banco:</label>
+            <input type="text" id="nombreBanco" required>
+            
+                <label for="accountType">Tipo de cuenta</label>
+                <select type="text" id="tipoCuenta" >
+                    <option value="">Seleccionar</option>
+                    <option value="Ahorro">Ahorro</option>
+                    <option value="Corriente">Corriente</option>
+                    <option value="Inversion">Inversion</option>
+                </select>
+
+            <label for="saldoActual">Saldo Actual:</label>
+            <input type="number" id="saldoActual" required>
+
+            <label for="accountStatus">Estado de cuenta</label>
+            <select type="text" id="estadoCuenta" >
+                <option value="">Seleccionar</option>
+                <option value="Activo">Activo</option>
+                <option value="Inactivo">Inactivo</option>
+                <option value="Cerrada">Cerrada</option>
+            </select>
+
+            <label for="fechaApertura">Fecha de Apertura:</label>
+            <input type="date" id="fechaApertura">
+
+            <label for="descripcionCuenta">Descripción:</label>
+            <textarea id="descripcionCuenta"></textarea>
+
+            <button type="submit">Agregar Cuenta</button>
+        </form>
+        <div class="table-container">
+            <table id="cuentasTable">
+                <thead>
+                    <tr>
+                        <th>Número de Cuenta</th>
+                        <th>Nombre del Banco</th>
+                        <th>Tipo de Cuenta</th>
+                        <th>Saldo Actual</th>
+                        <th>Estado de la Cuenta</th>
+                        <th>Fecha de Apertura</th>
+                        <th>Descripción</th>
+                        <th>Eliminar</th>
+                        <th>Editar</th>
+                        <th>Consultar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Rows will be populated by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <script src="../js/GestionCuentas.js"></script>
+</body>
+
+</html>

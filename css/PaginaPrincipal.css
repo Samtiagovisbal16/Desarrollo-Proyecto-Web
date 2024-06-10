@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Gris claro */
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #c5b3e6; /* Morado pastel */
+    color: #333333; /* Gris oscuro */
+    padding: 1em;
+    text-align: center;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #9266a2; /* Morado pastel más oscuro */
+    padding: 0.5em;
+}
+
+.nav a {
+    color: #ffffff; /* Blanco */
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+}
+
+.nav a:hover {
+    background-color: #6d4680; /* Morado pastel más oscuro al pasar el mouse */
+}
+.container {
+    max-width: 1200px;
+    margin: 2em auto;
+    padding: 2em;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.welcome {
+    text-align: center;
+}
+
+.contenedorGrid {
+    display: grid;
+    grid-template-columns: 30% 40%;
+    grid-template-rows: 50px 50px;
+}
+
+main {
+    padding: 20px;
+}
+
+main img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+
+main p {
+    font-size: 1.2em;
+    color: #333333; /* Gris oscuro */
+}
+
+.titulo-3d {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #333333; /* Gris oscuro */
+    text-shadow: 3px 3px 0px #b083bc, /* Morado pastel más oscuro */
+                 6px 6px 0px #9b70a5, /* Otro tono de morado pastel */
+                 9px 9px 0px #b083bc; /* Morado pastel más oscuro */
+}

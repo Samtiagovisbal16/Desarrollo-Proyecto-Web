@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Gris claro */
+}
+
+.header {
+    background-color: #c5b3e6; /* Morado pastel */
+    color: #333333; /* Gris oscuro */
+    
+    text-align: center;
+}
+
+.contenedorGrid {
+    display: grid;
+    grid-template-columns: 30% 40%;
+    grid-template-rows: 60px 70px;
+}
+
+
+h1 {
+    font-size: 3em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombras para efecto 3D */
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #333333; /* Gris oscuro */
+    text-decoration: none;
+}
+
+main {
+    padding: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff; /* Blanco */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #333333; /* Gris oscuro */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, select, textarea, button {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #d4a5d6; /* Morado pastel */
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #b083bc; /* Morado pastel más oscuro */
+}
+
+.edit {
+    background-color: #c5b3e6; /* Morado pastel */
+    color: white;
+}
+
+.consult {
+    background-color: #9b70a5; /* Tono pastel de morado */
+    color: white;
+}
+
+.delete {
+    background-color: #333333; /* Gris oscuro */
+    color: white;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+th, td {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2; /* Gris claro */
+}
+
+.edit, .consult, .delete {
+    border: none;
+    padding: 0.3rem 0.6rem;
+    cursor: pointer;
+    margin-right: 0.3rem;
+    border-radius: 4px;
+}
+
+.edit:hover, .consult:hover, .delete:hover {
+    filter: brightness(85%);
+}
+
+.footer-content {
+    text-align: center;
+    padding: 1rem;
+    background-color: #c5b3e6; /* Morado pastel */
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+

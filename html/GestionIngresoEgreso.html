@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Tipos de Ingresos y Egresos</title>
+    <link rel="stylesheet" href="../css/Style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="contenedorGrid">
+            <div>
+                <img src="../recursos/Aurola-logo.png" width="100px" height="100px" >
+            </div>
+            <h1 class="titulo-3d">BRILLANTE AURORA</h1>
+        </div>
+    </header>
+    <main>
+        <h2>Gestión de Tipos de Ingresos y Egresos</h2>
+        <form id="tipoForm">
+            <label for="codigo">Código:</label>
+            <input type="text" id="codigo" required>
+
+            <label for="nombreTipo">Nombre del Tipo:</label>
+            <input type="text" id="nombreTipo" required>
+
+            <label for="tipo">Tipo:</label>
+            <select id="tipo" required>
+                <option value="ingreso">Ingreso</option>
+                <option value="egreso">Egreso</option>
+            </select>
+
+            <label for="categoria">Categoría:</label>
+            <input type="text" id="categoria">
+
+            <label for="descripcionTipo">Descripción:</label>
+            <textarea id="descripcionTipo"></textarea>
+
+            <button type="submit">Agregar Tipo</button>
+        </form>
+                <div class="table-container">
+        <table id="tiposTable">
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Nombre</th>
+                    <th>Tipo</th>
+                    <th>Categoría</th>
+                    <th>Descripción</th>
+                    <th>Eliminar</th>
+                    <th>Editar</th>
+                    <th>Consultar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Rows will be populated by JavaScript -->
+            </tbody>
+        </table>
+    </div>
+    </main>
+    <script src="../js/GestionTipos.js"></script>
+</body>
+</html>

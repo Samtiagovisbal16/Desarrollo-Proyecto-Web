@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Alertas</title>
+    <link rel="stylesheet" href="../css/Style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="contenedorGrid">
+            <div>
+                <img src="../recursos/Aurola-logo.png" width="100px" height="100px" >
+            </div>
+            <h1 class="titulo-3d">BRILLANTE AURORA</h1>
+        </div>
+    </header>
+    <main>
+        <h2>Gestión de Alertas</h2>
+        <form id="alertaForm">
+            <label for="tipoAlerta">Tipo de Alerta:</label>
+            <input type="text" id="tipoAlerta" required>
+
+            <label for="descripcionAlerta">Descripción de la Alerta:</label>
+            <textarea id="descripcionAlerta" required></textarea>
+
+            <label for="fechaHoraAlerta">Fecha y Hora de la Alerta:</label>
+            <input type="datetime-local" id="fechaHoraAlerta" required>
+
+            <label for="opcionesRepeticion">Opciones de Repetición:</label>
+            <select id="opcionesRepeticion">
+                <option value="una vez">Una vez</option>
+                <option value="diariamente">Diariamente</option>
+                <option value="semanalmente">Semanalmente</option>
+                <option value="mensualmente">Mensualmente</option>
+            </select>
+
+            <button type="submit">Agregar Alerta</button>
+        </form>
+        <table id="alertasTable">
+            <thead>
+                <tr>
+                    <th>Tipo</th>
+                    <th>Descripción</th>
+                    <th>Fecha y Hora</th>
+                    <th>Repetición</th>
+                    <th>Eliminar</th>
+                    <th>Editar</th>
+                    <th>Consultar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Rows will be populated by JavaScript -->
+            </tbody>
+        </table>
+    </main>
+    <script src="../js/gestion-alertas.js"></script>
+</body>
+</html>

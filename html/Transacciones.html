@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Transacciones</title>
+    <link rel="stylesheet" href="../css/Style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="contenedorGrid">
+            <div>
+                <img src="../recursos/Aurola-logo.png" width="100px" height="100px" >
+            </div>
+            <h1 class="titulo-3d">BRILLANTE AURORA</h1>
+        </div>
+    </header>
+    <main>
+        <h2>Gestión de Transacciones</h2>
+        <form id="transaccionForm">
+            <label for="tipoTransaccion">Tipo de Transacción:</label>
+            <select id="tipoTransaccion" required>
+                <option value="ingreso">Ingreso</option>
+                <option value="egreso">Egreso</option>
+            </select>
+
+            <label for="tipoAsociado">Tipo de Ingreso/Egreso:</label>
+            <input type="text" id="tipoAsociado" required>
+
+            <label for="valorTransaccion">Valor de la Transacción:</label>
+            <input type="number" id="valorTransaccion" required>
+
+            <label for="cuentaRelacionada">Cuenta Bancaria Relacionada:</label>
+            <select id="cuentaRelacionada" required>
+                <!-- Options will be populated by JavaScript -->
+            </select>
+
+            <label for="fechaTransaccion">Fecha de la Transacción:</label>
+            <input type="date" id="fechaTransaccion" required>
+
+            <label for="archivo">Archivo</label>
+            <input type="file" id="archivo" accept="image/*, .pdf, .doc, .docx">
+
+            <label for="descripcionTransaccion">Descripción:</label>
+            <textarea id="descripcionTransaccion"></textarea>
+
+            <button type="submit">Agregar Transacción</button>
+        </form>
+        <div class="table-container">
+        <table id="transaccionesTable">
+            <thead>
+                <tr>
+                    <th>Tipo</th>
+                    <th>Tipo Asociado</th>
+                    <th>Valor</th>
+                    <th>Cuenta Relacionada</th>
+                    <th>Fecha</th>
+                    <th>Archivo</th>
+                    <th>Descripción</th>
+                    <th>Eliminar</th>
+                    <th>Editar</th>
+                    <th>Consultar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Rows will be populated by JavaScript -->
+            </tbody>
+        </table>
+    </div>
+    </main>
+    <script src="../js/Transacciones.js"></script>
+</body>
+</html>
