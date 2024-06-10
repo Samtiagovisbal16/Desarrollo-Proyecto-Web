@@ -106,36 +106,30 @@ function editarTransaccion(tipoAsociado, valorTransaccion, cuentaRelacionada, fe
         const newValorTransaccion = prompt("Ingrese el nuevo valor de la transacción:", transacciones[transaccionIndex].valorTransaccion);
         const newCuentaRelacionada = prompt("Ingrese la nueva cuenta relacionada:", transacciones[transaccionIndex].cuentaRelacionada);
         const newFechaTransaccion = prompt("Ingrese la nueva fecha de transacción:", transacciones[transaccionIndex].fechaTransaccion);
-        
-        const fileInput = document.createElement('input');
-        fileInput.type = 'file';
-        fileInput.accept = 'image/*, .pdf, .doc, .docx';
-        fileInput.onchange = function(event) {
-            const newArchivo = event.target.files[0] ? event.target.files[0].name : transacciones[transaccionIndex].archivo;
-            const newDescripcionTransaccion = prompt("Ingrese la nueva descripción de la transacción:", transacciones[transaccionIndex].descripcionTransaccion);
+        const newDescripcionTransaccion = prompt("Ingrese la nueva descripción de la transacción:", transacciones[transaccionIndex].descripcionTransaccion);
 
-            if (newTipoTransaccion !== null && newTipoAsociado !== null && newValorTransaccion !== null && newCuentaRelacionada !== null && newFechaTransaccion !== null && newArchivo !== null && newDescripcionTransaccion !== null) {
-                transacciones[transaccionIndex] = {
-                    tipoTransaccion: newTipoTransaccion || transacciones[transaccionIndex].tipoTransaccion,
-                    tipoAsociado: newTipoAsociado || transacciones[transaccionIndex].tipoAsociado,
-                    valorTransaccion: newValorTransaccion || transacciones[transaccionIndex].valorTransaccion,
-                    cuentaRelacionada: newCuentaRelacionada || transacciones[transaccionIndex].cuentaRelacionada,
-                    fechaTransaccion: newFechaTransaccion || transacciones[transaccionIndex].fechaTransaccion,
-                    archivo: newArchivo || transacciones[transaccionIndex].archivo,
-                    descripcionTransaccion: newDescripcionTransaccion || transacciones[transaccionIndex].descripcionTransaccion
-                };
+        if (newTipoTransaccion !== null && newTipoAsociado !== null && newValorTransaccion !== null && newCuentaRelacionada !== null && newFechaTransaccion !== null) {
+            const newArchivo = prompt("Ingrese el nombre del nuevo archivo (deje en blanco si no cambia):", transacciones[transaccionIndex].archivo);
 
-                localStorage.setItem('transacciones', JSON.stringify(transacciones));
-                alert("Transacción editada exitosamente.");
-                displayTransacciones(); // Actualizar la tabla
-            } else {
-                alert("Edición cancelada. No se realizaron cambios.");
-            }
-        };
+            transacciones[transaccionIndex] = {
+                tipoTransaccion: newTipoTransaccion || transacciones[transaccionIndex].tipoTransaccion,
+                tipoAsociado: newTipoAsociado || transacciones[transaccionIndex].tipoAsociado,
+                valorTransaccion: newValorTransaccion || transacciones[transaccionIndex].valorTransaccion,
+                cuentaRelacionada: newCuentaRelacionada || transacciones[transaccionIndex].cuentaRelacionada,
+                fechaTransaccion: newFechaTransaccion || transacciones[transaccionIndex].fechaTransaccion,
+                archivo: newArchivo || transacciones[transaccionIndex].archivo,
+                descripcionTransaccion: newDescripcionTransaccion || transacciones[transaccionIndex].descripcionTransaccion
+            };
 
-        fileInput.click();
+            localStorage.setItem('transacciones', JSON.stringify(transacciones));
+            alert("Transacción editada exitosamente.");
+            displayTransacciones(); // Actualizar la tabla
+        } else {
+            alert("Edición cancelada. No se realizaron cambios.");
+        }
     } else {
         alert("La transacción no fue encontrada.");
     }
 }
+
 
